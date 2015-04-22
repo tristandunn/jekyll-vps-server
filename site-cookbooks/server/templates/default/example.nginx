@@ -1,0 +1,3 @@
+server {
+  root /var/www/example.com/current/_site;
+}
