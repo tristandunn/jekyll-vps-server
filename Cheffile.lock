@@ -12,6 +12,11 @@ SITE
       dmg (>= 0.0.0)
       windows (>= 0.0.0)
       yum-epel (>= 0.0.0)
+    monit-ng (1.6.2)
+      apt (>= 0.0.0)
+      build-essential (>= 0.0.0)
+      ubuntu (>= 0.0.0)
+      yum-epel (>= 0.0.0)
     nginx (2.7.6)
       apt (~> 2.2)
       bluepill (~> 2.3)
@@ -30,6 +35,8 @@ SITE
     runit (1.6.0)
       packagecloud (>= 0.0.0)
     sshd (1.1.1)
+    ubuntu (1.1.8)
+      apt (>= 0.0.0)
     windows (1.36.6)
       chef_handler (>= 0.0.0)
     yum (3.5.4)
@@ -37,6 +44,7 @@ SITE
       yum (~> 3.0)
 
 DEPENDENCIES
+  monit-ng (>= 0)
   nginx (>= 0)
   rbenv (>= 0)
   sshd (>= 0)

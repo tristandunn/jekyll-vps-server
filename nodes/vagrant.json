@@ -3,7 +3,8 @@
     "recipe[user]",
     "recipe[ruby]",
     "recipe[server]",
-    "recipe[sshd]"
+    "recipe[sshd]",
+    "recipe[monit]"
   ],
 
   "nginx" : {
