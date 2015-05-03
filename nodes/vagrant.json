@@ -2,7 +2,8 @@
   "run_list" : [
     "recipe[user]",
     "recipe[ruby]",
-    "recipe[server]"
+    "recipe[server]",
+    "recipe[sshd]"
   ],
 
   "nginx" : {
@@ -18,6 +19,12 @@
 
   "ruby" : {
     "version" : "2.1.5"
+  },
+
+  "sshd" : {
+    "sshd_config" : {
+      "PasswordAuthentication" : "no"
+    }
   },
 
   "user" : "deploy"

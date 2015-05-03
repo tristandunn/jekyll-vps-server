@@ -29,6 +29,7 @@ SITE
     rsyslog (1.15.0)
     runit (1.6.0)
       packagecloud (>= 0.0.0)
+    sshd (1.1.1)
     windows (1.36.6)
       chef_handler (>= 0.0.0)
     yum (3.5.4)
@@ -38,4 +39,5 @@ SITE
 DEPENDENCIES
   nginx (>= 0)
   rbenv (>= 0)
+  sshd (>= 0)
 
