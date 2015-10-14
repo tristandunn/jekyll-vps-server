@@ -1,3 +1,14 @@
 server {
   root /var/www/example.com/current/_site;
+
+  location ~ "^/assets/" {
+    # Enable gzip compression.
+    gzip_vary on;
+    gzip_static on;
+
+    # Leverage browser caching.
+    add_header ETag "";
+    add_header Expires "Thu, 31 Dec 2037 23:55:55 GMT";
+    add_header Cache-Control "public, max-age=315360000";
+  }
 }
