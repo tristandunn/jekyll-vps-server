@@ -5,9 +5,15 @@ directory "/var/www" do
 end
 
 template "example" do
-  path   "#{node[:nginx][:dir]}/sites-available/example"
-  owner  node[:user]
-  source "example.nginx"
+  path  "#{node[:nginx][:dir]}/sites-available/example"
+  owner node[:user]
+
+  # Use an SSL configuration file when the certificate is present.
+  if File.exist?("/etc/ssl/example.com.crt")
+    source "example.ssl.nginx"
+  else
+    source "example.nginx"
+  end
 
   notifies :reload, "service[nginx]"
 end
